@@ -1,8 +1,7 @@
-# name: clearance
+# name: gold-dollar
 # ---------------
-# Based on idan. Display the following bits on the left:
+# Based on clearance. Display the following bits on the left:
 # - Virtualenv name (if applicable, see https://github.com/adambrenecki/virtualfish)
-# - Current directory name
 # - Git branch and dirty state (if inside a git repo)
 
 function _git_branch_name
@@ -28,7 +27,7 @@ function fish_prompt
   # Output the prompt, left to right
 
   # Add a newline before new prompts
-  echo -e ''
+  #echo -e ''
 
   # Display [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV
@@ -36,7 +35,7 @@ function fish_prompt
   end
 
   # Print pwd or full path
-  echo -n -s $cwd $normal
+  #echo -n -s $cwd $normal
 
   # Show git branch and status
   if [ (_git_branch_name) ]
@@ -47,15 +46,16 @@ function fish_prompt
     else
       set git_info '(' $green $git_branch $normal ')'
     end
-    echo -n -s ' · ' $git_info $normal
+    #echo -n -s ' · ' $git_info $normal
+    echo -n -s $git_info $normal
   end
 
   set -l prompt_color $red
   if test $last_status = 0
-    set prompt_color $normal
+    set prompt_color $yellow
   end
 
   # Terminate with a nice prompt char
   echo -e ''
-  echo -e -n -s $prompt_color '⟩ ' $normal
+  echo -e -n -s $prompt_color '$ ' $normal
 end

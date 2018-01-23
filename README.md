@@ -1,9 +1,5 @@
-# Fish Theme: clearance
+# Fish Theme: gold-dollar
 
 A minimalist [fish shell](http://fishshell.com/) theme for people who use git
-
-![clearance theme](https://raw.github.com/cseelus/clearance-fish/master/clearance-fish_preview.png)
-
-## Like it?
-
-Check out other versions of this theme for OSX Terminal or VIM!
+Inspired by [oh-my-fish/theme-clearance](https://github.com/oh-my-fish/theme-clearance)
+, [cseelus/clearance-fish](https://github.com/cseelus/clearance-fish)
